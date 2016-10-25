@@ -5,7 +5,7 @@ library("monkeylearn")
 
 rladies <- get_timeline(user = "RLadiesGlobal",
                         n = 1000)
-
+write_csv(rladies, path = "data/timeline.csv")
 # filter only tweets, no direct tweets or retweets
 rladies <- select(rladies, - coordinates)
 rladies <- filter(rladies, !is_retweet, is.na(in_reply_to_status_id))
@@ -13,7 +13,7 @@ rladies <- filter(rladies, !is_retweet, is.na(in_reply_to_status_id))
 # English
 rladies <- filter(rladies, lang == "en")
 
-write_csv(rladies, path = "data/timeline.csv")
+
 
 
 
