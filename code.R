@@ -23,7 +23,7 @@ sentimientos <- monkeylearn_classify(rladies$text,
                                      classifier_id = "cl_qkjxv9Ly")
 sentimientos <- bind_cols(select(rladies, text),
                           sentimientos)
-write_csv(sentimientos, path = "output/algo2_output.csv")
+write_csv(sentimientos, path = "output/algo1_output.csv")
 
 # sentimientos algo 2 "English Tweets Sentiment&Emotion Analysis"
 sentimientos <- monkeylearn_classify(rladies$text,
